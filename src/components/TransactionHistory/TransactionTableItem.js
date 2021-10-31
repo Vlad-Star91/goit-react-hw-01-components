@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import s from './TransactionHistory.module.css'
 
-export default function TransactionTableList({ type, amount, currency }) {
+export default function TransactionTableItem({ type, amount, currency }) {
     return (
         <tr>
             <td className={s.type}>{type}</td>
@@ -13,8 +13,8 @@ export default function TransactionTableList({ type, amount, currency }) {
     );
 }
 
-TransactionTableList.propTypes = {
+TransactionTableItem.propTypes = {
     type: PropTypes.string.isRequired,
-    amount: PropTypes.number.isRequired,
+    amount: PropTypes.string.isRequired,
     currency: PropTypes.string.isRequired
 };
